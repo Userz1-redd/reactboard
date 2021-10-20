@@ -20,3 +20,15 @@
     object-fit : contain;
     margin-bottom: 15px;
 }
+.product > button{
+    background-color : white;
+    border: 1px solid;
+    margin-top : 10px;
+    border-color:#8768bf #a5a5f3 #61dafb;
+}
+.product > button:hover{
+    background-color : #61dafb;
+}
+.product_price{
+    
+}

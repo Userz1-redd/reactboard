@@ -1,25 +1,28 @@
 import React from 'react';
 import './Product.css';
-const Product = () => {
+const Product = ({id, title, image, price, rating}) => {
+
     return (
         <div className="product">
             <div className="product_info">
-                <p>제품1</p>
+                <p>{ title }</p>
                 <p className="product_price">
                 <small>가격</small>
-                <strong>10,000</strong>
+                <strong>{price}</strong>
                 <small>원</small>
                 </p>
                 <div className="product_rating">
-                    <p>ㅁ</p>
-                    <p>ㅁ</p>
-                    <p>ㅁ</p>
-                    <p>ㅁ</p>
-            
+                    {
+                        Array(rating)
+                            .fill()
+                            .map(() => (
+                                <p>★</p>
+                            ))
+                    }
                 </div>
 
             </div>
-            <img src="http://placehold.it/" alt=""/>
+            <img src={image} alt=""/>
             <button>장바구니에 담기</button>
         </div>
     );
